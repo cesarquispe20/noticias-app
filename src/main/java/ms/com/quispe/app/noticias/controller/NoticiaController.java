@@ -61,7 +61,7 @@ public class NoticiaController {
 
 	@DeleteMapping
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
-	public void eliminarNoticia(@RequestBody Noticia obj) {		
+	public void eliminarNoticia(@RequestBody Noticia obj) {
 		noticiaService.eliminar(obj);
 	}
 
