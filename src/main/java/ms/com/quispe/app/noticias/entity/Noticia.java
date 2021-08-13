@@ -27,13 +27,17 @@ public class Noticia {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	
 	@Column(length = 200, nullable = false)
 	private String titulo;
+	
+	@Column(nullable = false)
+	private String codigo;
 	
 	private String detalle;
 	
 	@Column(name = "fecha_creacion")
 	private Date fechaCreacion;	
 	
-	private String estatus;
+	private String estado;
 }

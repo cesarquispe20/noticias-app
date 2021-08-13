@@ -18,7 +18,7 @@ import ms.com.quispe.app.noticias.entity.Noticia;
 public interface NoticiaRepository extends JpaRepository<Noticia, Long>{
 	
 	
-	@Query(value = "SELECT * FROM NOTICIAS n WHERE n.estado = ?1", nativeQuery = true)
-	public Noticia findByUsername2(String estado );
+	@Query(value = "SELECT * FROM NOTICIAS n WHERE n.estado = '1'", nativeQuery = true)
+	public Noticia findByNoticiaActiva();
 
 }
