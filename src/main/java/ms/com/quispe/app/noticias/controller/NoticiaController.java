@@ -5,6 +5,7 @@ package ms.com.quispe.app.noticias.controller;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,7 +42,9 @@ public class NoticiaController {
 		return new ResponseEntity<List<Noticia>>(response, HttpStatus.OK);
 		
 	}
-	
+
+
+
 	@PostMapping
 	public ResponseEntity<Noticia> guardarNoticia(@RequestBody Noticia obj) {
 		
@@ -49,7 +52,7 @@ public class NoticiaController {
 		
 		return new ResponseEntity<Noticia>(response, HttpStatus.CREATED);
 	}
- 
+
 	@GetMapping("/{id}") 
 	public ResponseEntity<Noticia> buscarPorId(@PathVariable(name = "id") Long id) {
 

@@ -71,6 +71,7 @@ public class NoticiaServiceImpl implements INoticiaService {
 		Date fechaCreacion = noticia.getFechaCreacion();		
 		noticia = obj;
 		noticia.setFechaCreacion(fechaCreacion);
+		noticia.setEstado('1');
 		noticia.setFechaModificacion(new Date());
 		
 		return noticiaRepository.save(obj);
