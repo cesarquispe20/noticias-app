@@ -16,7 +16,7 @@ public interface INoticiaService {
 	public List<Noticia> listarNoticiasActivas();
 	public Noticia guardar(Noticia obj);
 	public Noticia buscarPorId(Long id);
-	public void eliminar(Noticia obj);
+	public Noticia eliminar(Noticia obj);
 	public Noticia actualizar(Noticia obj);
 	
 }

@@ -11,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.Data;
 
@@ -36,8 +38,16 @@ public class Noticia {
 	
 	private String detalle;
 	
-	@Column(name = "fecha_creacion")
-	private Date fechaCreacion;	
 	
-	private String estado;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "fecha_creacion")
+	private Date fechaCreacion;
+	
+	@Column(length = 1)
+	private Character estado;
+	
+	@Column(name = "fecha_modificacion")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date fechaModificacion;
+	
 }
