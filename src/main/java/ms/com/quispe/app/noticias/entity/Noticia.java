@@ -20,7 +20,7 @@ import lombok.Data;
  */
 @Entity
 @Data
-@Table(name = "noticas")
+@Table(name = "noticias")
 public class Noticia {
 	
 	@Id

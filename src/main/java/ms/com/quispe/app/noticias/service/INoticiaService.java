@@ -13,7 +13,7 @@ import ms.com.quispe.app.noticias.entity.Noticia;
  */
 public interface INoticiaService {
 
-	public List<Noticia> listar();
+	public List<Noticia> listarNoticiasActivas();
 	public Noticia guardar(Noticia obj);
 	public Noticia buscarPorId(Long id);
 	public void eliminar(Noticia obj);

@@ -24,8 +24,7 @@ public class NoticiaServiceImpl implements INoticiaService {
 	
 
 	@Override
-	public List<Noticia> listar() {
-
+	public List<Noticia> listarNoticiasActivas() {
 		return (List<Noticia>) noticiaRepository.findByNoticiaActiva();
 	}
 
